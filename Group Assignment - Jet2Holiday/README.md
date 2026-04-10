@@ -137,3 +137,4 @@ After running `generate_figures.py`:
 | `figures/fig5_batch_loss.png` | Loss curves for 5 batch sizes |
 | `figures/fig6_batch_accuracy.png` | Accuracy curves for 5 batch sizes |
 | `figures/fig7_predictions.png` | 10×10 grid of first 100 test predictions |
+
