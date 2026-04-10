@@ -1,0 +1,41 @@
+# Exp2: Loss function comparison
+
+# Experiment name
+experiment:
+  name: exp2_loss
+  description: Loss function comparison - LabelSmoothingCrossEntropy
+
+# Model settings
+model:
+  name: resnet18
+  pretrained: true
+  num_classes: 100
+
+# Training settings
+training:
+  epochs: 50
+  batch_size: 128
+  learning_rate: 0.001
+  num_workers: 4
+  seed: 42
+  data_dir: ./data
+
+# Loss function (Label Smoothing)
+loss:
+  type: LabelSmoothingCrossEntropy
+  smoothing: 0.1
+
+# Optimiser
+optimizer:
+  type: Adam
+  weight_decay: 0.0001
+
+# Early stopping
+early_stopping:
+  enabled: true
+  patience: 10
+
+# Output paths
+paths:
+  checkpoint_dir: ./checkpoints/exp2_loss
+  result_dir: ./results/exp2_loss
